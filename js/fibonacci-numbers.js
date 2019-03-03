@@ -5,8 +5,10 @@ alert(`${index} fibonacci number is:
 2) function with recursion ${getFibonacciNumberByRecursion(index)};
 3) function with array and cycle ${getFibonacciNumberByArrayAndCycle(index)}.`);
 
-
 function getFibonacciNumberByCycle(index) {
+    if (index <= 0) {
+        return ;
+    }
     let firstNumber = 1;
     let secondNumber = 1;
     for (let i = 3; i <= index; i++) {
@@ -18,6 +20,9 @@ function getFibonacciNumberByCycle(index) {
 }
 
 function getFibonacciNumberByRecursion(index) {
+    if (index <= 0) {
+        return ;
+    }
     if (index <= 2) {
         return 1;
     }
@@ -25,6 +30,9 @@ function getFibonacciNumberByRecursion(index) {
 }
 
 function getFibonacciNumberByArrayAndCycle(index) {
+    if (index <= 0) {
+        return ;
+    }
     let numberArray = [1, 1];
     for (let i = 3; i <= index; i++) {
         let next = numberArray[numberArray.length - 1] + numberArray[numberArray.length - 2];
@@ -33,14 +41,12 @@ function getFibonacciNumberByArrayAndCycle(index) {
     return numberArray[numberArray.length - 1];
 }
 
-function checkIndexValue(func, index) {
-
-    function wrapper() {
-        if (index <= 0) {
-            return ;
-        }
-        func.call(this, index);
-    }
-    
-    return wrapper;
-}
+// function checkIndexValue(func) {
+//     function wrapper(index) {
+//         if (index <= 0) {
+//             return ;
+//         }
+//         func.call(this, index);
+//     }
+//     return wrapper;
+// }
