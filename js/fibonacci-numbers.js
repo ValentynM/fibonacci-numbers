@@ -7,7 +7,7 @@ alert(`${index} fibonacci number is:
 
 function getFibonacciNumberByCycle(index) {
     if (index <= 0) {
-        return ;
+        return;
     }
     let firstNumber = 1;
     let secondNumber = 1;
@@ -21,7 +21,7 @@ function getFibonacciNumberByCycle(index) {
 
 function getFibonacciNumberByRecursion(index) {
     if (index <= 0) {
-        return ;
+        return;
     }
     if (index <= 2) {
         return 1;
@@ -31,7 +31,7 @@ function getFibonacciNumberByRecursion(index) {
 
 function getFibonacciNumberByArrayAndCycle(index) {
     if (index <= 0) {
-        return ;
+        return;
     }
     let numberArray = [1, 1];
     for (let i = 3; i <= index; i++) {
